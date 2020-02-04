@@ -1,7 +1,5 @@
 require_relative "./starships_cli/version"
-
-module StarshipsCli
-  class Error < StandardError; end
-  # Your code goes here...
-end
+require_relative "./starships_cli/api"
+require_relative "./starships_cli/cli"
+require_relative "./starships_cli/starship"
 puts "environment file"
