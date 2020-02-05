@@ -1,4 +1,4 @@
-class Starship 
+
  class Starship 
   attr_accessor :name, :model, :manufacturer, :starship_class
   
@@ -21,7 +21,7 @@ end
 
 def self.find_by_name(name)
   self.all.select do |starship| 
-    starship.name == name  
+    starship.name.downcase == name  
   end 
 end  
 end

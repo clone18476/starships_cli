@@ -9,12 +9,24 @@ class StarshipsCli::CLI
   def menu
     input = gets.strip.downcase
     if input == "starships"
-      puts "starships"
+      starships_list
+      menu
       elsif input == "exit"
-      puts "exit"
+      goodbye
     else
-      puts "invalid entry,try again."
-      menu 
+     invalid_entry
     end
   end
+  def starships_list 
+    puts "1. starship 1"
+    puts "2. starship 2"
+    puts "3. starship 3"
+  end 
+  def goodbye 
+    puts "bye, may the force be with you."
+  end 
+  def invalid_entry
+    puts "invalid entry try again"
+    menu
+  end 
 end
