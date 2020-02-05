@@ -21,6 +21,15 @@ class StarshipsCli::CLI
     puts "1. starship 1"
     puts "2. starship 2"
     puts "3. starship 3"
+    puts ""
+    puts ""
+    puts "which starship would you like more detail about:"
+    input = gets.strip.downcase
+    starship_selection(input)
+  end 
+  def starship_selection(starship)
+    puts "#{starship}"
+    
   end 
   def goodbye 
     puts "bye, may the force be with you."
