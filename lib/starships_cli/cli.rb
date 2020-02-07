@@ -29,8 +29,13 @@ class StarshipsCli::CLI
     starship_selection(input)
   end 
   def starship_selection(starship)
-    puts "#{starship}"
-    
+   ship=Starship.find_by_name(starship)
+    ship.each do |s|
+     puts  "Name: #{s.name}"
+      puts "Model: #{s.model}"
+      puts "Manufacturer: #{s.manufacturer}"
+      puts "Starship Class: #{s.starship_class}" 
+    end 
   end 
   def goodbye 
     puts "bye, may the force be with you."
