@@ -3,6 +3,7 @@ class StarshipsCli::CLI
     puts "Welcome user!"
     puts "To see starships, enter 'starships'"
     puts "To exit the galaxy, enter 'exit'"
+    API.get_data
     menu
   end 
   
@@ -18,9 +19,9 @@ class StarshipsCli::CLI
     end
   end
   def starships_list 
-    puts "1. starship 1"
-    puts "2. starship 2"
-    puts "3. starship 3"
+    Starship.all.each_with_index do |starship,index|
+      puts "#{index + 1}. #{starship.name}"
+    end 
     puts ""
     puts ""
     puts "which starship would you like more detail about:"
